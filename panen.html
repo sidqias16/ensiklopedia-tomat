@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Panduan masa panen tomat 60–90 hari: timeline 4 fase pertumbuhan dari semai hingga panen, kalkulator tanggal panen otomatis, dan tips memetik buah yang tepat." />
+  <meta name="keywords" content="masa panen tomat, berapa lama tomat panen, fase tumbuh tomat, kalkulator panen tomat, ciri tomat matang" />
+  <meta property="og:title" content="Siklus Hidup & Kalkulator Masa Panen Tomat — TomatPedia" />
+  <meta property="og:description" content="Hitung estimasi panen tomat Anda secara akurat dan pelajari setiap tahap pertumbuhan dari benih hingga panen melimpah." />
+  <meta property="og:type" content="website" />
+  <title>Masa Panen & Kalkulator Estimasi Tomat — TomatPedia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📅</text></svg>" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" role="progressbar" aria-label="Progress membaca halaman"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
+    <a href="index.html" class="nav-logo" aria-label="Kembali ke Beranda TomatPedia">
+      <div class="nav-logo-icon" aria-hidden="true">🍅</div>
+      <span>Tomat</span>
+    </a>
+
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="index.html"      role="menuitem" class="nav-link">Beranda</a></li>
+      <li role="none"><a href="botani.html"     role="menuitem" class="nav-link">Identitas Botani</a></li>
+      <li role="none"><a href="panen.html"      role="menuitem" class="nav-link active">Masa Panen</a></li>
+      <li role="none"><a href="manfaat.html"    role="menuitem" class="nav-link">Manfaat & Gizi</a></li>
+      <li role="none"><a href="perawatan.html"  role="menuitem" class="nav-link">Perawatan</a></li>
+      <li role="none"><a href="fakta.html"      role="menuitem" class="nav-link">Fakta & FAQ</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <span class="theme-label" id="theme-label-text">🌙 Gelap</span>
+      <button
+        class="theme-toggle"
+        id="theme-toggle-btn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Ganti tema terang/gelap"
+      ></button>
+      <button class="hamburger" id="hamburger-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" style="
+    display:none;
+    position:fixed;top:72px;left:0;right:0;z-index:999;
+    background:var(--bg-card);
+    border-bottom:1px solid var(--border-color);
+    padding:1rem;
+    box-shadow:var(--shadow-md);
+  ">
+    <ul style="display:flex;flex-direction:column;gap:0.35rem;">
+      <li><a href="index.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🏠 Beranda</a></li>
+      <li><a href="botani.html"    class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🌿 Identitas Botani</a></li>
+      <li><a href="panen.html"     class="nav-link active" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;background:rgba(230,57,70,0.1);color:var(--tomato-red);">📅 Masa Panen & Kalkulator</a></li>
+      <li><a href="manfaat.html"   class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">💊 Manfaat & Kalkulator Gizi</a></li>
+      <li><a href="perawatan.html" class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🌱 Panduan Perawatan</a></li>
+      <li><a href="fakta.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">✨ Fakta & FAQ</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <header class="page-hero">
+      <div class="page-hero-container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">🏠 Beranda</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Masa Panen & Kalkulator</span>
+        </nav>
+        <h1 class="page-hero-title">Siklus Pertumbuhan & Masa Panen Tomat</h1>
+        <p class="page-hero-subtitle">
+          Dari perkecambahan benih hari ke-1 hingga petik perdana dalam 60–90 hari. Gunakan kalkulator interaktif untuk memprediksi kalender panen kebun Anda.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="panen-section" style="padding: 4.5rem 0;">
+      <div class="container">
+        <div class="panen-header reveal">
+          <p class="section-label"><span>📅</span> Siklus Hidup Tanaman</p>
+          <h2 class="section-title">4 Tahap Kunci Menuju Panen Berlimpah</h2>
+          <p class="section-desc">
+            Pertumbuhan tanaman tomat terbagi menjadi 4 fase penting. Setiap fase membutuhkan pendekatan penyiraman, pemupukan, dan pemeliharaan yang spesifik agar menghasilkan buah yang lebat dan manis.
+          </p>
+        </div>
+
+        <!-- Timeline 4 Fase -->
+        <div class="timeline" role="list" aria-label="Fase siklus hidup tomat">
+          <!-- Fase 1 -->
+          <div class="timeline-item reveal" role="listitem">
+            <div class="timeline-content">
+              <p class="timeline-phase">Fase 1</p>
+              <h3 class="timeline-title">Perkecambahan & Penyemaian Benih</h3>
+              <span class="timeline-days">📅 Hari ke-1 hingga ke-7</span>
+              <p class="timeline-desc">
+                Benih disemai pada media semai halus berpori (cocopeat + kompos halus). Jaga kelembapan konstan pada suhu 22–27°C.
+                Tunas pertama akan muncul ke permukaan tanah dalam 5–7 hari. Segera kenalkan pada sinar matahari lembut agar batang tumbuh kokoh.
+              </p>
+            </div>
+            <div class="timeline-dot timeline-dot-1" aria-hidden="true">🌱</div>
+            <div class="timeline-empty"></div>
+          </div>
+
+          <!-- Fase 2 -->
+          <div class="timeline-item reveal" role="listitem">
+            <div class="timeline-empty"></div>
+            <div class="timeline-dot timeline-dot-2" aria-hidden="true">🌿</div>
+            <div class="timeline-content">
+              <p class="timeline-phase">Fase 2</p>
+              <h3 class="timeline-title">Pindah Tanam & Pertumbuhan Vegetatif</h3>
+              <span class="timeline-days">📅 Hari ke-14 hingga ke-30</span>
+              <p class="timeline-desc">
+                Saat bibit memiliki 4–5 helai daun sejati (usia 2–3 minggu), bibit dipindahkan ke polybag atau bedengan tanah terbuka.
+                Fase ini fokus pada pembentukan cabang, daun, dan akar kuat. Berikan pupuk dengan kadar Nitrogen seimbang dan mulai pasang ajir penyangga.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fase 3 -->
+          <div class="timeline-item reveal" role="listitem">
+            <div class="timeline-content">
+              <p class="timeline-phase">Fase 3</p>
+              <h3 class="timeline-title">Pembungaan & Pembentukan Buah Muda</h3>
+              <span class="timeline-days">📅 Hari ke-35 hingga ke-55</span>
+              <p class="timeline-desc">
+                Kuncup bunga kuning cerah mulai bermekaran di sela ketiak daun. Bantu penyerbukan dengan menggoyang batang secara perlahan setiap pagi pukul 08.00–10.00.
+                Beralih ke pupuk Fosfor (P) dan Kalium (K) tinggi untuk mencegah rontok bunga dan merangsang pembentukan bakal buah.
+              </p>
+            </div>
+            <div class="timeline-dot timeline-dot-3" aria-hidden="true">🌼</div>
+            <div class="timeline-empty"></div>
+          </div>
+
+          <!-- Fase 4 -->
+          <div class="timeline-item reveal" role="listitem">
+            <div class="timeline-empty"></div>
+            <div class="timeline-dot timeline-dot-4" aria-hidden="true">🍅</div>
+            <div class="timeline-content">
+              <p class="timeline-phase">Fase 4</p>
+              <h3 class="timeline-title">Pematangan Buah & Panen Perdana</h3>
+              <span class="timeline-days">📅 Hari ke-60 hingga ke-90</span>
+              <p class="timeline-desc">
+                Buah yang semula hijau mengkilap mulai beralih warna ke semburat oranye kekuningan hingga merah merona penuh.
+                Likopen terakumulasi sempurna saat buah matang di pohon. Petik secara berkala setiap 2–3 hari sekali untuk merangsang bunga berikutnya mekar.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Kalkulator Panen -->
+        <div class="kalkulator-card reveal" id="kalkulator" style="margin-top: 4.5rem;">
+          <h3 class="kalkulator-title"><span>🧮</span> Kalkulator Estimasi Panen Tomat</h3>
+          <p class="kalkulator-subtitle">
+            Pilih varietas dan masukkan tanggal penyemaian benih Anda untuk menghitung jadwal perkiraan pindah tanam, bunga pertama, dan hari panen puncak secara otomatis.
+          </p>
+
+          <div class="kalkulator-form">
+            <div class="form-group">
+              <label for="tanggal-semai">📅 Tanggal Penyemaian Benih</label>
+              <input
+                type="date"
+                id="tanggal-semai"
+                name="tanggal-semai"
+                aria-label="Masukkan tanggal semai benih"
+              />
+            </div>
+            <div class="form-group">
+              <label for="varietas-tomat">🍅 Varietas Tanaman Tomat</label>
+              <select id="varietas-tomat" name="varietas-tomat" aria-label="Pilih varietas tomat">
+                <option value="" disabled selected>— Pilih varietas tanaman —</option>
+                <option value="cherry" data-panen="55" data-bunga="30">Tomat Ceri (Panen Cepat: ~55 hari)</option>
+                <option value="cherry-yellow" data-panen="60" data-bunga="32">Tomat Ceri Kuning (~60 hari)</option>
+                <option value="gondol" data-panen="75" data-bunga="40">Tomat Gondol / Roma (~75 hari)</option>
+                <option value="apel"   data-panen="80" data-bunga="45">Tomat Apel / Sayur (~80 hari)</option>
+                <option value="mawar"  data-panen="90" data-bunga="50">Tomat Mawar Dataran Tinggi (~90 hari)</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn-hitung" id="btn-hitung" onclick="hitungPanen()" aria-label="Hitung estimasi panen">
+            🔢 Hitung Estimasi Jadwal Panen
+          </button>
+
+          <div class="kalkulator-result" id="kalkulator-result" role="alert" aria-live="polite">
+            <div class="result-grid" id="result-grid">
+              <div class="result-item">
+                <span class="result-date" id="result-pindah">—</span>
+                <div class="result-label">📦 Waktu Pindah Tanam</div>
+              </div>
+              <div class="result-item">
+                <span class="result-date" id="result-bunga">—</span>
+                <div class="result-label">🌼 Perkiraan Berbunga</div>
+              </div>
+              <div class="result-item">
+                <span class="result-date" id="result-panen">—</span>
+                <div class="result-label">🍅 Estimasi Panen Pertama</div>
+              </div>
+            </div>
+            <div class="result-tip" id="result-tip"></div>
+          </div>
+        </div>
+
+        <!-- Panduan Panen & Penyimpanan -->
+        <div class="reveal" style="margin-top: 4.5rem;">
+          <p class="section-label"><span>✂️</span> Petunjuk Praktis Petik</p>
+          <h2 class="section-title">Kriteria Panen & Cara Petik yang Benar</h2>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;margin-top:2rem;">
+            <div class="morph-card">
+              <div class="morph-icon">🎯</div>
+              <h4>Tingkat Kematangan Ideal</h4>
+              <p>Untuk konsumsi langsung, panen saat 90–100% buah berwarna merah segar. Untuk keperluan pengiriman atau penjualan pasar, panen saat buah berada pada fase "breaker" (30–60% merah-oranye).</p>
+            </div>
+            <div class="morph-card">
+              <div class="morph-icon">✂️</div>
+              <h4>Gunakan Gunting Panen</h4>
+              <p>Jangan menarik buah secara paksa karena dapat merobek cabang dan merusak bunga muda di sebelahnya. Gunakan gunting pangkas bersih dengan menyisakan sedikit tangkai kelopak bunga.</p>
+            </div>
+            <div class="morph-card">
+              <div class="morph-icon">🌅</div>
+              <h4>Waktu Panen Terbaik</h4>
+              <p>Lakukan pemetikan pada pagi hari setelah embun kering (pukul 07.00–09.00) atau sore hari yang sejuk. Hindari memetik di tengah terik siang karena suhu buah yang panas memicu pembusukan dini.</p>
+            </div>
+            <div class="morph-card">
+              <div class="morph-icon">🧺</div>
+              <h4>Suhu Penyimpanan Pasca Panen</h4>
+              <p>Simpan tomat matang pada suhu ruang (20–25°C) terhindar dari sinar matahari langsung. Jangan langsung masukkan tomat ke lemari es (kulkas), karena suhu di bawah 12°C merusak aroma dan rasa manis alaminya.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next / Previous Page Navigation -->
+        <div class="page-nav-bar reveal">
+          <a href="botani.html" class="page-nav-link">
+            ← Halaman Sebelumnya: Identitas Botani
+          </a>
+          <a href="manfaat.html" class="page-nav-link next">
+            Halaman Selanjutnya: Manfaat & Kalkulator Gizi →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <span>🍅</span> TomatPedia
+          </div>
+          <p class="footer-tagline">
+            Ensiklopedia dan website panduan budidaya tomat terlengkap dalam bahasa Indonesia.
+            Dari botani, siklus hidup, manfaat kesehatan, hingga tips perawatan dari ahli berkebun.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Halaman Website</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="botani.html">🌿 Identitas Botani</a></li>
+            <li><a href="panen.html">📅 Masa Panen & Kalkulator</a></li>
+            <li><a href="manfaat.html">💊 Manfaat & Kalkulator Gizi</a></li>
+            <li><a href="perawatan.html">🌱 Panduan Perawatan</a></li>
+            <li><a href="fakta.html">✨ Fakta & FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Referensi Ilmiah</h4>
+          <ul class="footer-links">
+            <li><a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">📊 USDA FoodData Central</a></li>
+            <li><a href="https://www.fao.org/" target="_blank" rel="noopener">🌍 FAO Agricultural Database</a></li>
+            <li><a href="https://academic.oup.com/jn" target="_blank" rel="noopener">📚 Journal of Nutrition</a></li>
+            <li><a href="https://balitsa.litbang.pertanian.go.id/" target="_blank" rel="noopener">🇮🇩 Balai Penelitian Tanaman Sayuran</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 TomatPedia · Dibuat dengan ❤️ untuk seluruh pecinta berkebun Indonesia
+        </p>
+        <button class="btn-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Kembali ke atas">↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
