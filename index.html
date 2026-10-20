@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TomatPedia — Portal ensiklopedia dan website panduan budidaya tomat (Solanum lycopersicum) terlengkap: identitas botani, kalkulator masa panen, manfaat kesehatan, checklist perawatan, dan fakta unik." />
+  <meta name="keywords" content="tomat, Solanum lycopersicum, panduan budidaya tomat, ensiklopedia tomat, cara menanam tomat, kalkulator panen tomat, manfaat tomat" />
+  <meta property="og:title" content="TomatPedia — Portal Ensiklopedia & Budidaya Tomat" />
+  <meta property="og:description" content="Website terlengkap seputar tanaman tomat: botani, kalender panen, gizi superfood, cara merawat, hingga fakta unik." />
+  <meta property="og:type" content="website" />
+  <title>TomatPedia — Portal Ensiklopedia & Panduan Budidaya Tomat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍅</text></svg>" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" role="progressbar" aria-label="Progress membaca halaman"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
+    <a href="index.html" class="nav-logo" aria-label="Kembali ke Beranda TomatPedia">
+      <div class="nav-logo-icon" aria-hidden="true">🍅</div>
+      <span>Tomat</span>
+    </a>
+
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="index.html"      role="menuitem" class="nav-link active">Beranda</a></li>
+      <li role="none"><a href="botani.html"     role="menuitem" class="nav-link">Identitas Botani</a></li>
+      <li role="none"><a href="panen.html"      role="menuitem" class="nav-link">Masa Panen</a></li>
+      <li role="none"><a href="manfaat.html"    role="menuitem" class="nav-link">Manfaat & Gizi</a></li>
+      <li role="none"><a href="perawatan.html"  role="menuitem" class="nav-link">Perawatan</a></li>
+      <li role="none"><a href="fakta.html"      role="menuitem" class="nav-link">Fakta & FAQ</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <span class="theme-label" id="theme-label-text">🌙 Gelap</span>
+      <button
+        class="theme-toggle"
+        id="theme-toggle-btn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Ganti tema gelap/terang"
+      ></button>
+      <button class="hamburger" id="hamburger-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" style="
+    display:none;
+    position:fixed;top:72px;left:0;right:0;z-index:999;
+    background:var(--bg-card);
+    border-bottom:1px solid var(--border-color);
+    padding:1rem;
+    box-shadow:var(--shadow-md);
+  ">
+    <ul style="display:flex;flex-direction:column;gap:0.35rem;">
+      <li><a href="index.html"     class="nav-link active" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;background:rgba(230,57,70,0.1);color:var(--tomato-red);">🏠 Beranda</a></li>
+      <li><a href="botani.html"    class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🌿 Identitas Botani</a></li>
+      <li><a href="panen.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">📅 Masa Panen & Kalkulator</a></li>
+      <li><a href="manfaat.html"   class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">💊 Manfaat & Kalkulator Gizi</a></li>
+      <li><a href="perawatan.html" class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🌱 Panduan Perawatan</a></li>
+      <li><a href="fakta.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">✨ Fakta & FAQ</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-container">
+        <!-- Left Content -->
+        <div class="hero-content">
+          <div class="hero-badge" aria-label="Klasifikasi ilmiah">
+            <span>🌿</span> Solanum lycopersicum · Portal Budidaya & Edukasi
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            Ensiklopedia & Panduan<br />
+            <span class="highlight">Tanaman Tomat</span><br />
+            Terlengkap di Indonesia
+          </h1>
+
+          <p class="hero-subtitle">Solanum lycopersicum — Si Merah Kaya Manfaat</p>
+
+          <p class="hero-description">
+            Selamat datang di TomatPedia! Sumber rujukan terpercaya seputar botani tanaman,
+            kalender dan kalkulator masa panen, nilai gizi superfood, cara merawat tanaman agar lebat,
+            hingga fakta-fakta dunia yang menakjubkan.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#modul" class="btn-primary">
+              <span>🚀</span> Jelajahi Halaman
+            </a>
+            <a href="manfaat.html#kalkulator-gizi" class="btn-outline">
+              <span>🧮</span> Kalkulator Gizi
+            </a>
+            <a href="panen.html#kalkulator" class="btn-outline">
+              <span>📅</span> Kalkulator Panen
+            </a>
+          </div>
+
+          <div class="hero-stats" role="list" aria-label="Statistik kilat tomat">
+            <div class="stat-card" role="listitem">
+              <span class="stat-number">60–90</span>
+              <span class="stat-label">Hari Masa Panen</span>
+            </div>
+            <div class="stat-card" role="listitem">
+              <span class="stat-number">94.5%</span>
+              <span class="stat-label">Kandungan Air</span>
+            </div>
+            <div class="stat-card" role="listitem">
+              <span class="stat-number">18 kkal</span>
+              <span class="stat-label">Per 100g</span>
+            </div>
+            <div class="stat-card" role="listitem">
+              <span class="stat-number">#1</span>
+              <span class="stat-label">Sumber Likopen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual -->
+<!-- Right Visual (Sesudah diubah menggunakan foto) -->
+<div class="hero-visual" aria-hidden="true">
+  <div class="hero-image-wrap" id="hero-image-container">
+    <!-- Ganti 'foto-tomat.jpg' dengan nama file foto atau URL gambar Anda -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKOcJnZsLVrfzGHAyg48pzIIN8Ai9bG0oAy7GCTBUQLw&s=10" alt="Solanum lycopersicum" class="hero-real-image" />
+  </div>
+
+  <div class="floating-badge floating-badge-1">🌡️ Suhu Ideal 20–27°C</div>
+  <div class="floating-badge floating-badge-2">💧 Siram 1–2x Sehari</div>
+  <div class="floating-badge floating-badge-3">☀️ Sinar Penuh 6–8 Jam</div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PORTAL MODULES SECTION (Directory to all website pages)
+         ============================================================ -->
+    <section class="portal-section" id="modul">
+      <div class="container">
+        <div class="text-center reveal">
+          <p class="section-label"><span>📚</span> Jelajahi Website Kami</p>
+          <h2 class="section-title">Pilih Topik & Halaman Panduan</h2>
+          <p class="section-desc" style="margin: 0 auto;">
+            Website TomatPedia dibagi menjadi 5 bagian halaman utama yang disusun secara komprehensif untuk memudahkan Anda belajar dan berkebun.
+          </p>
+        </div>
+
+        <div class="portal-grid">
+          <!-- Card 1: Botani -->
+          <article class="portal-card reveal">
+            <div>
+              <div class="portal-card-header">
+                <div class="portal-icon">🌿</div>
+                <div>
+                  <span class="portal-badge">Halaman 01</span>
+                  <h3 class="portal-title">Identitas & Botani</h3>
+                </div>
+              </div>
+              <p class="portal-desc">
+                Pelajari taksonomi ilmiah resmi, karakteristik morfologi dari sistem akar tunggang hingga biji, serta keunggulan 4 varietas tomat populer di Indonesia.
+              </p>
+            </div>
+            <div class="portal-footer">
+              <div class="portal-tags">
+                <span class="portal-tag">Taksonomi</span>
+                <span class="portal-tag">Morfologi</span>
+                <span class="portal-tag">4 Varietas</span>
+              </div>
+              <a href="botani.html" class="portal-btn">
+                Buka Halaman <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Masa Panen -->
+          <article class="portal-card reveal">
+            <div>
+              <div class="portal-card-header">
+                <div class="portal-icon" style="background:rgba(67,97,238,0.1);">📅</div>
+                <div>
+                  <span class="portal-badge">Halaman 02</span>
+                  <h3 class="portal-title">Siklus & Masa Panen</h3>
+                </div>
+              </div>
+              <p class="portal-desc">
+                Pahami timeline 4 fase hidup dari semai benih hari ke-1 hingga petik buah. Lengkap dengan <strong>Kalkulator Estimasi Panen Otomatis</strong> interaktif.
+              </p>
+            </div>
+            <div class="portal-footer">
+              <div class="portal-tags">
+                <span class="portal-tag">60–90 Hari</span>
+                <span class="portal-tag">Kalkulator</span>
+                <span class="portal-tag">Cara Petik</span>
+              </div>
+              <a href="panen.html" class="portal-btn">
+                Buka Halaman <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Manfaat & Gizi -->
+          <article class="portal-card reveal">
+            <div>
+              <div class="portal-card-header">
+                <div class="portal-icon" style="background:rgba(230,57,70,0.1);">💊</div>
+                <div>
+                  <span class="portal-badge">Halaman 03</span>
+                  <h3 class="portal-title">Khasiat & Kalkulator Gizi</h3>
+                </div>
+              </div>
+              <p class="portal-desc">
+                Ulasan 6 khasiat superfood organ vital plus <strong>Kalkulator Gizi Interaktif</strong> untuk menghitung kalori, likopen, vitamin C, kalium, dan % AKG porsi harian Anda secara presisi.
+              </p>
+            </div>
+            <div class="portal-footer">
+              <div class="portal-tags">
+                <span class="portal-tag">Kalkulator Gizi</span>
+                <span class="portal-tag">Likopen #1</span>
+                <span class="portal-tag">Tabel USDA</span>
+              </div>
+              <a href="manfaat.html#kalkulator-gizi" class="portal-btn">
+                Buka Halaman <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: Perawatan -->
+          <article class="portal-card reveal">
+            <div>
+              <div class="portal-card-header">
+                <div class="portal-icon" style="background:rgba(82,183,136,0.15);">🌱</div>
+                <div>
+                  <span class="portal-badge">Halaman 04</span>
+                  <h3 class="portal-title">Panduan Perawatan</h3>
+                </div>
+              </div>
+              <p class="portal-desc">
+                5 pilar perawatan intensif: sinar matahari, teknik siram, racikan media tanah & pupuk, pemangkasan tunas air, proteksi hama, serta <strong>Checklist Interaktif Harian</strong>.
+              </p>
+            </div>
+            <div class="portal-footer">
+              <div class="portal-tags">
+                <span class="portal-tag">5 Tab Pilar</span>
+                <span class="portal-tag">Checklist</span>
+                <span class="portal-tag">Bebas Hama</span>
+              </div>
+              <a href="perawatan.html" class="portal-btn">
+                Buka Halaman <span>→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5: Fakta & FAQ -->
+          <article class="portal-card reveal">
+            <div>
+              <div class="portal-card-header">
+                <div class="portal-icon" style="background:rgba(244,162,97,0.15);">✨</div>
+                <div>
+                  <span class="portal-badge">Halaman 05</span>
+                  <h3 class="portal-title">Fakta Unik & FAQ</h3>
+                </div>
+              </div>
+              <p class="portal-desc">
+                Koleksi rekor dunia, sejarah peradaban Aztec, sidang Mahkamah Agung AS, pembuktian mitos usus buntu secara medis, dan tanya jawab (FAQ) seputar tomat.
+              </p>
+            </div>
+            <div class="portal-footer">
+              <div class="portal-tags">
+                <span class="portal-tag">Rekor Dunia</span>
+                <span class="portal-tag">Mitos Medis</span>
+                <span class="portal-tag">Tanya Jawab</span>
+              </div>
+              <a href="fakta.html" class="portal-btn">
+                Buka Halaman <span>→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Featured Highlights Banner -->
+        <div class="stats-banner reveal" style="margin-top: 4rem;">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:2rem;align-items:center;">
+            <div>
+              <p class="section-label" style="margin-bottom:0.5rem;"><span>💡</span> Mengapa Memilih Tomat?</p>
+              <h3 style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--txt-primary);margin-bottom:0.75rem;">
+                Tanaman Pekarangan Terbaik untuk Pemula & Keluarga
+              </h3>
+              <p style="font-size:0.92rem;color:var(--txt-secondary);line-height:1.7;">
+                Tomat mudah beradaptasi di polybag, cepat berbuah dalam kurun waktu 2 bulan, serta menghasilkan sayur-buah segar bebas pestisida langsung dari teras rumah Anda.
+              </p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div style="display:flex;align-items:center;gap:1rem;background:var(--bg-card-2);padding:1rem 1.25rem;border-radius:var(--radius-md);">
+                <span style="font-size:1.6rem;">⏱️</span>
+                <div>
+                  <strong style="color:var(--txt-primary);font-size:0.95rem;display:block;">Panen Tercepat</strong>
+                  <span style="font-size:0.85rem;color:var(--txt-secondary);">Tomat ceri sudah mulai dipanen pada hari ke-55 setelah semai.</span>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;gap:1rem;background:var(--bg-card-2);padding:1rem 1.25rem;border-radius:var(--radius-md);">
+                <span style="font-size:1.6rem;">🛡️</span>
+                <div>
+                  <strong style="color:var(--txt-primary);font-size:0.95rem;display:block;">Kaya Antioksidan</strong>
+                  <span style="font-size:0.85rem;color:var(--txt-secondary);">Konsumsi 1 tomat sedang memenuhi 28% kebutuhan harian Vitamin C.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="reveal" style="
+          margin-top: 3.5rem;
+          background: var(--grad-hero);
+          border-radius: var(--radius-xl);
+          padding: 3.5rem 2rem;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+        ">
+          <h2 style="font-family:var(--font-display);font-size:clamp(1.8rem, 3.2vw, 2.5rem);font-weight:700;color:#FFFDF9;margin-bottom:1rem;">
+            Mulai Perjalanan Bertanam Tomat Anda Hari Ini!
+          </h2>
+          <p style="font-size:1.05rem;color:rgba(255,253,249,0.8);max-width:650px;margin:0 auto 2rem;line-height:1.7;">
+            Pelajari struktur tanamannya di modul botani atau langsung hitung kapan kebun Anda siap panen dengan kalkulator estimasi kami.
+          </p>
+          <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
+            <a href="botani.html" class="btn-primary" style="background:#FFFDF9;color:var(--leaf-green);box-shadow:none;">
+              <span>🌿</span> Mulai dari Identitas Botani
+            </a>
+            <a href="perawatan.html" class="btn-outline">
+              <span>🌱</span> Buka Panduan Perawatan
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <span>🍅</span> TomatPedia
+          </div>
+          <p class="footer-tagline">
+            Ensiklopedia dan website panduan budidaya tomat terlengkap dalam bahasa Indonesia.
+            Dari botani, siklus hidup, manfaat kesehatan, hingga tips perawatan dari ahli berkebun.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Halaman Website</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="botani.html">🌿 Identitas Botani</a></li>
+            <li><a href="panen.html">📅 Masa Panen & Kalkulator</a></li>
+            <li><a href="manfaat.html">💊 Manfaat & Kalkulator Gizi</a></li>
+            <li><a href="perawatan.html">🌱 Panduan Perawatan</a></li>
+            <li><a href="fakta.html">✨ Fakta & FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Referensi Ilmiah</h4>
+          <ul class="footer-links">
+            <li><a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">📊 USDA FoodData Central</a></li>
+            <li><a href="https://www.fao.org/" target="_blank" rel="noopener">🌍 FAO Agricultural Database</a></li>
+            <li><a href="https://academic.oup.com/jn" target="_blank" rel="noopener">📚 Journal of Nutrition</a></li>
+            <li><a href="https://balitsa.litbang.pertanian.go.id/" target="_blank" rel="noopener">🇮🇩 Balai Penelitian Tanaman Sayuran</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 TomatPedia · Dibuat dengan ❤️ untuk seluruh pecinta berkebun Indonesia
+        </p>
+        <button class="btn-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Kembali ke atas">↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

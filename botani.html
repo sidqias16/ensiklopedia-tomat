@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pelajari identitas botani tomat (Solanum lycopersicum): taksonomi ilmiah lengkap, morfologi akar, batang, daun, bunga, buah, biji, serta varietas unggul di Indonesia." />
+  <meta name="keywords" content="botani tomat, Solanum lycopersicum, taksonomi tomat, morfologi tanaman tomat, varietas tomat ceri apel gondol" />
+  <meta property="og:title" content="Identitas & Karakteristik Botani Tomat — TomatPedia" />
+  <meta property="og:description" content="Ensiklopedia botani tanaman tomat: asal-usul, taksonomi ilmiah, struktur organ, dan pilihan varietas unggulan." />
+  <meta property="og:type" content="website" />
+  <title>Identitas & Karakteristik Botani Tomat — TomatPedia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" role="progressbar" aria-label="Progress membaca halaman"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
+    <a href="index.html" class="nav-logo" aria-label="Kembali ke Beranda TomatPedia">
+      <div class="nav-logo-icon" aria-hidden="true">🍅</div>
+      <span>Tomat</span>
+    </a>
+
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="index.html"      role="menuitem" class="nav-link">Beranda</a></li>
+      <li role="none"><a href="botani.html"     role="menuitem" class="nav-link active">Identitas Botani</a></li>
+      <li role="none"><a href="panen.html"      role="menuitem" class="nav-link">Masa Panen</a></li>
+      <li role="none"><a href="manfaat.html"    role="menuitem" class="nav-link">Manfaat & Gizi</a></li>
+      <li role="none"><a href="perawatan.html"  role="menuitem" class="nav-link">Perawatan</a></li>
+      <li role="none"><a href="fakta.html"      role="menuitem" class="nav-link">Fakta & FAQ</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <span class="theme-label" id="theme-label-text">🌙 Gelap</span>
+      <button
+        class="theme-toggle"
+        id="theme-toggle-btn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Ganti tema gelap/terang"
+      ></button>
+      <button class="hamburger" id="hamburger-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" style="
+    display:none;
+    position:fixed;top:72px;left:0;right:0;z-index:999;
+    background:var(--bg-card);
+    border-bottom:1px solid var(--border-color);
+    padding:1rem;
+    box-shadow:var(--shadow-md);
+  ">
+    <ul style="display:flex;flex-direction:column;gap:0.35rem;">
+      <li><a href="index.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🏠 Beranda</a></li>
+      <li><a href="botani.html"    class="nav-link active" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;background:rgba(230,57,70,0.1);color:var(--tomato-red);">🌿 Identitas Botani</a></li>
+      <li><a href="panen.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">📅 Masa Panen & Kalkulator</a></li>
+      <li><a href="manfaat.html"   class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">💊 Manfaat & Kalkulator Gizi</a></li>
+      <li><a href="perawatan.html" class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🌱 Panduan Perawatan</a></li>
+      <li><a href="fakta.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">✨ Fakta & FAQ</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <header class="page-hero">
+      <div class="page-hero-container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">🏠 Beranda</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Identitas Botani</span>
+        </nav>
+        <h1 class="page-hero-title">Identitas & Taksonomi Botani Tomat</h1>
+        <p class="page-hero-subtitle">
+          Mengenal anatomi, klasifikasi ilmiah, dan varietas unggul <em>Solanum lycopersicum</em> dari sudut pandang ilmu botani.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Botanical Content -->
+    <section class="botani-section" style="padding: 4.5rem 0;">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label"><span>🌿</span> Klasifikasi & Asal Usul</p>
+          <h2 class="section-title">Solanum lycopersicum<br />Si Merah dari Dataran Andes</h2>
+          <p class="section-desc">
+            Tomat berasal dari wilayah Andes Amerika Selatan (mencakup Peru, Bolivia, Ekuador, dan Chile).
+            Awalnya merupakan tanaman liar berbuah kecil yang kemudian didomestikasi oleh suku Aztec di Meksiko
+            sebelum diperkenalkan ke seluruh pelosok dunia.
+          </p>
+        </div>
+
+        <div class="botani-grid">
+          <!-- Taksonomi Ilmiah -->
+          <div class="taxonomy-card reveal" id="taxonomy-card">
+            <h3 class="taxonomy-title">
+              <span>📋</span> Taksonomi Ilmiah Resmi
+            </h3>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Kingdom</span>
+              <span class="taxonomy-val">Plantae (Tumbuhan)</span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Subkingdom</span>
+              <span class="taxonomy-val">Tracheobionta (Tumbuhan Berpembuluh)</span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Superdivisi</span>
+              <span class="taxonomy-val">Spermatophyta (Tumbuhan Berbiji)</span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Divisi</span>
+              <span class="taxonomy-val">Magnoliophyta (Tumbuhan Berbunga)</span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Kelas</span>
+              <span class="taxonomy-val">Magnoliopsida (Berkeping Dua / Dikotil)</span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Ordo</span>
+              <span class="taxonomy-val">Solanales</span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Famili</span>
+              <span class="taxonomy-val"><em>Solanaceae</em> (Terung-terungan)</span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Genus</span>
+              <span class="taxonomy-val"><em>Solanum</em></span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Spesies</span>
+              <span class="taxonomy-val"><em>Solanum lycopersicum L.</em></span>
+            </div>
+            <div class="taxonomy-row">
+              <span class="taxonomy-key">Sinonim Botani</span>
+              <span class="taxonomy-val"><em>Lycopersicon esculentum Mill.</em></span>
+            </div>
+          </div>
+
+          <!-- Karakteristik Morfologi -->
+          <div class="reveal" style="display:flex;flex-direction:column;gap:1.5rem;">
+            <div>
+              <p class="section-label" style="margin-bottom:0.5rem;"><span>🔬</span> Karakteristik Morfologi Organ</p>
+              <p style="font-size:0.92rem;color:var(--txt-secondary);line-height:1.7;">
+                Tanaman tomat adalah herba semusim (<em>annual herb</em>) dengan batang lunak berbulu kelenjar
+                yang memancarkan aroma aromatik tajam saat disentuh. Berikut adalah struktur lengkap organ utamanya:
+              </p>
+            </div>
+            <div class="morph-grid">
+              <div class="morph-card">
+                <div class="morph-icon">🌱</div>
+                <h4>Sistem Perakaran</h4>
+                <p>Akar tunggang dapat menembus tanah hingga kedalaman 60–100 cm. Didukung jaringan akar serabut lateral luas untuk menyerap hara dan air secara maksimal.</p>
+              </div>
+              <div class="morph-card">
+                <div class="morph-icon">🌿</div>
+                <h4>Batang & Percabangan</h4>
+                <p>Batang bulat berbulu kelenjar (trikoma). Bertipe <em>determinate</em> (tipe semak, tinggi terbatas) atau <em>indeterminate</em> (tipe merambat tak terbatas).</p>
+              </div>
+              <div class="morph-card">
+                <div class="morph-icon">🍃</div>
+                <h4>Struktur Daun</h4>
+                <p>Daun majemuk menyirip gasal dengan 5–9 anak daun bertepi gerigi. Permukaannya memiliki bulu kelenjar beraroma khas yang berfungsi sebagai proteksi alami.</p>
+              </div>
+              <div class="morph-card">
+                <div class="morph-icon">🌼</div>
+                <h4>Bunga & Penyerbukan</h4>
+                <p>Bunga berbentuk bintang berkelopak 5–6 kuning cerah, berkarakter hermafrodit (biseksual). Sebagian besar mampu menyerbuki sendiri dibantu hembusan angin atau getaran.</p>
+              </div>
+              <div class="morph-card">
+                <div class="morph-icon">🍅</div>
+                <h4>Buah Buni (Berry)</h4>
+                <p>Buah sejati tipe buni (berry) berdaging tebal berair. Memiliki 2 hingga lebih dari 10 ruang lokul yang berisi biji terlindungi cairan plasenta kaya likopen.</p>
+              </div>
+              <div class="morph-card">
+                <div class="morph-icon">🌾</div>
+                <h4>Biji Tanaman</h4>
+                <p>Pipih oval berselimut bulu gelatin tipis. Berwarna krem kekuningan. Rata-rata 150–300 butir per buah dengan daya tumbuh viabel 3–5 tahun dalam penyimpanan kering.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Varietas Populer -->
+        <div class="varietas-section reveal" style="margin-top: 5rem;">
+          <p class="section-label"><span>🏷️</span> Keanekaragaman Varietas</p>
+          <h2 class="section-title" style="font-size:2rem;">4 Varietas Tomat Populer di Indonesia</h2>
+          <p class="section-desc">
+            Setiap varietas tomat memiliki karakteristik morfologi, rasa, ketahanan iklim, dan kegunaan kuliner yang berbeda.
+            Pilih varietas yang paling cocok dengan kebutuhan pekarangan atau kebun Anda.
+          </p>
+
+          <div class="varietas-grid">
+            <div class="varietas-card">
+              <div class="varietas-emoji">🍒</div>
+              <div class="varietas-name">Tomat Ceri (Cherry Tomato)</div>
+              <div class="varietas-desc">
+                Berukuran kecil (diameter 2–3 cm) dengan rasa sangat manis dan renyah. Sangat adaptif di dalam pot gantung atau polybag pekarangan.
+              </div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:0.75rem;">
+                <span class="varietas-tag">Diameter: 2–3 cm</span>
+                <span class="varietas-tag">Masa Panen: 55–60 Hari</span>
+                <span class="varietas-tag">Brix Gula: Tinggi (7–9%)</span>
+              </div>
+            </div>
+
+            <div class="varietas-card">
+              <div class="varietas-emoji">🍎</div>
+              <div class="varietas-name">Tomat Apel (Beefsteak Tomato)</div>
+              <div class="varietas-desc">
+                Bentuk bulat padat menyerupai apel dengan daging buah tebal berair. Cocok dikonsumsi segar sebagai jus, salad, atau saus buatan rumah.
+              </div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:0.75rem;">
+                <span class="varietas-tag">Bobot: 150–250 gram</span>
+                <span class="varietas-tag">Masa Panen: 75–85 Hari</span>
+                <span class="varietas-tag">Daging Buah Tebal</span>
+              </div>
+            </div>
+
+            <div class="varietas-card">
+              <div class="varietas-emoji">🥫</div>
+              <div class="varietas-name">Tomat Gondol (Plum / Roma)</div>
+              <div class="varietas-desc">
+                Berbentuk lonjong dengan kulit liat tebal dan kadar air lebih rendah. Favorit petani komersial karena tahan pengangkutan jarak jauh dan tidak mudah rusak.
+              </div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:0.75rem;">
+                <span class="varietas-tag">Panjang: 5–8 cm</span>
+                <span class="varietas-tag">Masa Panen: 70–80 Hari</span>
+                <span class="varietas-tag">Tahan Simpan Lama</span>
+              </div>
+            </div>
+
+            <div class="varietas-card">
+              <div class="varietas-emoji">🌸</div>
+              <div class="varietas-name">Tomat Mawar / Keriting</div>
+              <div class="varietas-desc">
+                Memiliki bentuk unik berlekuk-lekuk menyerupai kelopak mawar. Varietas unggulan dataran tinggi (Lembang, Malang, Brastagi) dengan cita rasa asam segar khas masakan nusantara.
+              </div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:0.75rem;">
+                <span class="varietas-tag">Bobot: 100–180 gram</span>
+                <span class="varietas-tag">Masa Panen: 85–95 Hari</span>
+                <span class="varietas-tag">Aroma Khas Kuat</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next / Previous Page Navigation -->
+        <div class="page-nav-bar reveal">
+          <a href="index.html" class="page-nav-link">
+            ← Kembali ke Beranda
+          </a>
+          <a href="panen.html" class="page-nav-link next">
+            Halaman Selanjutnya: Panduan Masa Panen →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <span>🍅</span> TomatPedia
+          </div>
+          <p class="footer-tagline">
+            Ensiklopedia dan website panduan budidaya tomat terlengkap dalam bahasa Indonesia.
+            Dari botani, siklus hidup, manfaat kesehatan, hingga tips perawatan dari ahli berkebun.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Halaman Website</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="botani.html">🌿 Identitas Botani</a></li>
+            <li><a href="panen.html">📅 Masa Panen & Kalkulator</a></li>
+            <li><a href="manfaat.html">💊 Manfaat & Kalkulator Gizi</a></li>
+            <li><a href="perawatan.html">🌱 Panduan Perawatan</a></li>
+            <li><a href="fakta.html">✨ Fakta & FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Referensi Ilmiah</h4>
+          <ul class="footer-links">
+            <li><a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">📊 USDA FoodData Central</a></li>
+            <li><a href="https://www.fao.org/" target="_blank" rel="noopener">🌍 FAO Agricultural Database</a></li>
+            <li><a href="https://academic.oup.com/jn" target="_blank" rel="noopener">📚 Journal of Nutrition</a></li>
+            <li><a href="https://balitsa.litbang.pertanian.go.id/" target="_blank" rel="noopener">🇮🇩 Balai Penelitian Tanaman Sayuran</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 TomatPedia · Dibuat dengan ❤️ untuk seluruh pecinta berkebun Indonesia
+        </p>
+        <button class="btn-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Kembali ke atas">↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

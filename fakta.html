@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Koleksi fakta unik dunia, sejarah suku Aztec, putusan Mahkamah Agung AS 1893, pemecahan mitos vs fakta ilmiah, dan tanya jawab (FAQ) seputar tanaman tomat." />
+  <meta name="keywords" content="fakta unik tomat, sejarah tomat, mitos biji tomat usus buntu, tomat buah atau sayur, FAQ budidaya tomat" />
+  <meta property="og:title" content="Fakta Unik, Mitos & FAQ Seputar Tomat — TomatPedia" />
+  <meta property="og:description" content="Hal-hal mengejutkan tentang tomat yang jarang diketahui: rekor produksi dunia, mitos vs fakta kedokteran, dan tanya jawab umum." />
+  <meta property="og:type" content="website" />
+  <title>Fakta Menarik, Mitos & FAQ Tomat — TomatPedia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" role="progressbar" aria-label="Progress membaca halaman"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
+    <a href="index.html" class="nav-logo" aria-label="Kembali ke Beranda TomatPedia">
+      <div class="nav-logo-icon" aria-hidden="true">🍅</div>
+      <span>Tomat</span>
+    </a>
+
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="index.html"      role="menuitem" class="nav-link">Beranda</a></li>
+      <li role="none"><a href="botani.html"     role="menuitem" class="nav-link">Identitas Botani</a></li>
+      <li role="none"><a href="panen.html"      role="menuitem" class="nav-link">Masa Panen</a></li>
+      <li role="none"><a href="manfaat.html"    role="menuitem" class="nav-link">Manfaat & Gizi</a></li>
+      <li role="none"><a href="perawatan.html"  role="menuitem" class="nav-link">Perawatan</a></li>
+      <li role="none"><a href="fakta.html"      role="menuitem" class="nav-link active">Fakta & FAQ</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <span class="theme-label" id="theme-label-text">🌙 Gelap</span>
+      <button
+        class="theme-toggle"
+        id="theme-toggle-btn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Ganti tema gelap/terang"
+      ></button>
+      <button class="hamburger" id="hamburger-btn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" style="
+    display:none;
+    position:fixed;top:72px;left:0;right:0;z-index:999;
+    background:var(--bg-card);
+    border-bottom:1px solid var(--border-color);
+    padding:1rem;
+    box-shadow:var(--shadow-md);
+  ">
+    <ul style="display:flex;flex-direction:column;gap:0.35rem;">
+      <li><a href="index.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🏠 Beranda</a></li>
+      <li><a href="botani.html"    class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🌿 Identitas Botani</a></li>
+      <li><a href="panen.html"     class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">📅 Masa Panen & Kalkulator</a></li>
+      <li><a href="manfaat.html"   class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">💊 Manfaat & Kalkulator Gizi</a></li>
+      <li><a href="perawatan.html" class="nav-link" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;">🌱 Panduan Perawatan</a></li>
+      <li><a href="fakta.html"     class="nav-link active" onclick="closeMobileNav()" style="display:block;padding:0.75rem 1rem;border-radius:12px;font-weight:600;background:rgba(230,57,70,0.1);color:var(--tomato-red);">✨ Fakta & FAQ</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <header class="page-hero">
+      <div class="page-hero-container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">🏠 Beranda</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Fakta Menarik & FAQ</span>
+        </nav>
+        <h1 class="page-hero-title">Ensiklopedia Trivia, Mitos & FAQ Tomat</h1>
+        <p class="page-hero-subtitle">
+          Dari sidang Mahkamah Agung Amerika Serikat 1893 hingga klarifikasi mitos usus buntu dan jawaban atas pertanyaan paling sering diajukan.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="fakta-section" style="padding: 4.5rem 0;">
+      <div class="container">
+        <!-- 6 Fakta Menakjubkan -->
+        <div class="reveal">
+          <p class="section-label"><span>✨</span> Fakta Menakjubkan Dunia</p>
+          <h2 class="section-title">Rekor & Sejarah di Balik Buah Merah</h2>
+          <p class="section-desc">
+            Tomat bukan sekadar bahan dapur biasa. Sejarah perjalanan dan angka-angka statistiknya di panggung global menyimpan fakta menakjubkan.
+          </p>
+        </div>
+
+        <div class="fakta-grid">
+          <div class="fakta-card reveal">
+            <div class="fakta-num">180M+</div>
+            <h3>Ton Produksi Global per Tahun</h3>
+            <p>Tomat adalah komoditas tanaman hortikultura terbesar kedua di bumi setelah kentang. China memimpin sebagai produsen terbesar dunia dengan menyumbang lebih dari 37% total panen global.</p>
+          </div>
+
+          <div class="fakta-card reveal">
+            <div class="fakta-num">10×</div>
+            <h3>Khasiat Likopen Naik Saat Dimasak</h3>
+            <p>Pemanasan termal memecah dinding selulosa tebal tomat dan mengubah struktur ikatan likopen menjadi bentuk <em>cis</em>, meningkatkan bioavailabilitas antioksidannya hingga 10 kali lipat dibanding mentah.</p>
+          </div>
+
+          <div class="fakta-card reveal">
+            <div class="fakta-num">1893</div>
+            <h3>Kasus Mahkamah Agung AS</h3>
+            <p>Dalam sengketa dagang bersejarah <em>Nix v. Hedden</em>, Mahkamah Agung AS memutuskan tomat dikenai bea masuk sebagai "sayuran" berdasarkan penggunaannya di meja makan, meski secara botani merupakan buah sejati.</p>
+          </div>
+
+          <div class="fakta-card reveal">
+            <div class="fakta-num">10.000+</div>
+            <h3>Varietas di Seluruh Dunia</h3>
+            <p>Dari tomat mini ceri seukuran kelereng hingga varietas raksasa Beefsteak seberat 1.5 kilogram, dengan ragam warna mulai dari merah menyala, kuning emas, hijau zamrud, hingga ungu gelap kehitaman.</p>
+          </div>
+
+          <div class="fakta-card reveal">
+            <div class="fakta-num">499 SM</div>
+            <h3>Dibudidayakan Suku Aztec</h3>
+            <p>Jauh sebelum penjelajah Eropa menginjakkan kaki di benua Amerika, suku Aztec kuno telah membudidayakan "tomatl" dan menggunakannya sebagai bahan pangan pokok serta resep herbal tradisi mereka.</p>
+          </div>
+
+          <div class="fakta-card reveal">
+            <div class="fakta-num">94.5%</div>
+            <h3>Kadar Air Alami Tertinggi</h3>
+            <p>Komposisi tomat hampir seluruhnya air murni kaya elektrolit alami kalium, menjadikannya salah satu makanan pencegah dehidrasi dan penurun tekanan darah terbaik dari alam.</p>
+          </div>
+        </div>
+
+        <!-- Mitos vs Fakta Ilmiah -->
+        <div class="reveal" style="margin-top: 5rem;">
+          <p class="section-label"><span>🔍</span> Uji Kebenaran Medis</p>
+          <h2 class="section-title">Mitos vs Fakta Populer Seputar Tomat</h2>
+          <p class="section-desc">
+            Banyak kabar beredar di masyarakat yang keliru. Mari kita bedah kebenarannya berdasarkan bukti ilmiah dan ilmu kedokteran.
+          </p>
+
+          <div class="myth-grid">
+            <!-- Card 1 -->
+            <div class="myth-card">
+              <span class="myth-badge myth">❌ Mitos</span>
+              <h3 class="myth-title">"Makan biji tomat menyebabkan radang usus buntu"</h3>
+              <p class="myth-body">
+                <strong>Fakta Medis:</strong> Ini adalah mitos keliru yang sangat populer. Penelitian kedokteran membuktikan radang usus buntu (apendisitis) disebabkan oleh infeksi bakteri, pembengkakan jaringan limfoid, atau penumpukan feses mengeras (fekalit). Biji tomat memiliki lapisan serat lendir alami yang dapat dicerna atau dikeluarkan dengan aman melalui buang air besar tanpa menyangkut di usus buntu.
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="myth-card">
+              <span class="myth-badge myth">❌ Mitos</span>
+              <h3 class="myth-title">"Tomat harus selalu disimpan di dalam kulkas agar segar"</h3>
+              <p class="myth-body">
+                <strong>Fakta Botani:</strong> Memasukkan tomat segar utuh ke dalam kulkas pada suhu di bawah 12°C justru menonaktifkan enzim pembentuk senyawa volatil aromatik (pemberi rasa manis dan wangi khas). Tomat yang didinginkan akan kehilangan rasa dan tekstur daging buahnya menjadi bertepung (mealy). Simpanlah di suhu ruang dengan tangkai menghadap ke bawah!
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="myth-card">
+              <span class="myth-badge myth">❌ Mitos</span>
+              <h3 class="myth-title">"Tomat hijau mentah beracun dan tidak boleh dikonsumsi"</h3>
+              <p class="myth-body">
+                <strong>Fakta Kimia Pangan:</strong> Tomat hijau memang mengandung alkaloid <em>tomatine</em>, namun konsentrasinya sangat rendah dan tidak membahayakan jika dikonsumsi dalam porsi makanan normal. Faktanya, di banyak tradisi kuliner nusantara dan mancanegara (seperti sambal ijo atau <em>fried green tomatoes</em>), tomat hijau dimasak dengan sangat lezat dan aman.
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="myth-card">
+              <span class="myth-badge fact">✅ Fakta</span>
+              <h3 class="myth-title">"Saus tomat olahan memiliki kadar likopen lebih padat dari buah segar"</h3>
+              <p class="myth-body">
+                <strong>Fakta Gizi:</strong> Benar! Pasta tomat dan saus tomat pekat mengalami proses evaporasi air dan reduksi termal sehingga konsentrasi likopen per gramnya menjadi jauh lebih pekat daripada tomat segar mentah. Namun, selalu perhatikan label produk untuk memilih saus tanpa tambahan gula berlebih atau bahan pengawet artifisial.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="reveal" style="margin-top: 5rem;">
+          <p class="section-label"><span>❓</span> Tanya Jawab Umum</p>
+          <h2 class="section-title">Frequently Asked Questions (FAQ)</h2>
+          <p class="section-desc">
+            Pertanyaan yang paling sering ditanyakan oleh pemula dan pecinta berkebun seputar tanaman tomat.
+          </p>
+
+          <div class="faq-accordion" id="faq-list">
+            <div class="faq-item active">
+              <button class="faq-question" type="button" aria-expanded="true">
+                <span>1. Secara botani, apakah tomat adalah buah atau sayuran?</span>
+                <span class="faq-icon">▾</span>
+              </button>
+              <div class="faq-answer">
+                Secara ilmu botani murni, tomat adalah <strong>buah sejati</strong> (tipe buni atau berry) karena berkembang dari bakal buah bunga yang telah diserbuki dan memiliki biji di dalamnya. Namun dalam dunia kuliner dan perpajakan perdagangan internasional, tomat dikategorikan sebagai <strong>sayuran</strong> karena disajikan sebagai bagian dari hidangan gurih (bukan hidangan penutup pencuci mulut yang manis).
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>2. Mengapa daun tomat di bagian bawah tanaman sering menguning?</span>
+                <span class="faq-icon">▾</span>
+              </button>
+              <div class="faq-answer">
+                Penyebab paling umum adalah: (1) Penuaan alami daun bagian bawah yang sudah tidak menerima cahaya matahari cukup, (2) Defisiensi unsur hara Nitrogen (N) karena tanaman menarik nutrisi ke pucuk baru, atau (3) Terlalu banyak disiram sehingga perakaran kekurangan oksigen. Segera pangkas daun bawah yang menguning untuk menjaga sirkulasi udara dan mencegah serangan jamur tanah.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>3. Mengapa bunga tomat saya mekar tapi rontok dan tidak menjadi buah?</span>
+                <span class="faq-icon">▾</span>
+              </button>
+              <div class="faq-answer">
+                Fenomena rontok bunga (<em>blossom drop</em>) biasanya dipicu oleh: suhu lingkungan terlalu panas (&gt;35°C) yang membuat serbuk sari mandul, kelembapan udara yang terlalu kering atau basah, kekurangan unsur hara Fosfor (P) dan Kalium (K), atau kurangnya getaran penyerbukan. Solusinya: goyang perlahan tangkai tanaman setiap pagi pukul 08.00–10.00 untuk membantu pelepasan serbuk sari ke putik.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>4. Berapa ukuran pot atau polybag minimal untuk menanam tomat?</span>
+                <span class="faq-icon">▾</span>
+              </button>
+              <div class="faq-answer">
+                Untuk varietas tomat ceri, ukuran pot minimal berdiameter 25–30 cm (volume 10–15 liter). Untuk varietas tomat besar seperti tomat apel atau gondol bertipe indeterminate (merambat), disarankan menggunakan pot berdiameter minimal 40 cm (volume 20–25 liter) dengan kedalaman tanah minimal 35 cm agar akar tunggang dapat berkembang leluasa.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false">
+                <span>5. Berapa kali sehari sebaiknya saya menyiram tanaman tomat?</span>
+                <span class="faq-icon">▾</span>
+              </button>
+              <div class="faq-answer">
+                Pada umumnya di iklim tropis Indonesia, penyiraman dilakukan 1–2 kali sehari: sekali di pagi hari (pukul 06.30–08.00) dan sekali di sore hari jika cuaca sangat terik. Selalu periksa tanah dengan tes jari telunjuk sedalam 3 cm: jika masih lembap, tunda penyiraman agar perakaran tidak mengalami busuk akar (root rot).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next / Previous Page Navigation -->
+        <div class="page-nav-bar reveal">
+          <a href="perawatan.html" class="page-nav-link">
+            ← Halaman Sebelumnya: Panduan Perawatan
+          </a>
+          <a href="index.html" class="page-nav-link next">
+            Kembali ke Beranda Utama 🏠
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <span>🍅</span> TomatPedia
+          </div>
+          <p class="footer-tagline">
+            Ensiklopedia dan website panduan budidaya tomat terlengkap dalam bahasa Indonesia.
+            Dari botani, siklus hidup, manfaat kesehatan, hingga tips perawatan dari ahli berkebun.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Halaman Website</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">🏠 Beranda</a></li>
+            <li><a href="botani.html">🌿 Identitas Botani</a></li>
+            <li><a href="panen.html">📅 Masa Panen & Kalkulator</a></li>
+            <li><a href="manfaat.html">💊 Manfaat & Kalkulator Gizi</a></li>
+            <li><a href="perawatan.html">🌱 Panduan Perawatan</a></li>
+            <li><a href="fakta.html">✨ Fakta & FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Referensi Ilmiah</h4>
+          <ul class="footer-links">
+            <li><a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">📊 USDA FoodData Central</a></li>
+            <li><a href="https://www.fao.org/" target="_blank" rel="noopener">🌍 FAO Agricultural Database</a></li>
+            <li><a href="https://academic.oup.com/jn" target="_blank" rel="noopener">📚 Journal of Nutrition</a></li>
+            <li><a href="https://balitsa.litbang.pertanian.go.id/" target="_blank" rel="noopener">🇮🇩 Balai Penelitian Tanaman Sayuran</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 TomatPedia · Dibuat dengan ❤️ untuk seluruh pecinta berkebun Indonesia
+        </p>
+        <button class="btn-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Kembali ke atas">↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
